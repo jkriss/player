@@ -250,6 +250,7 @@ function next(callback) {
 
   this.stop();
   this.play('next', list.slice(next._id));
+  this.history.push(next);
 
   return isCallback ? callback(null, next, current) : true;
 }
